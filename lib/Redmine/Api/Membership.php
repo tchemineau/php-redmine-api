@@ -94,7 +94,7 @@ class Membership extends AbstractApi
      * @param  array            $params for the new/updated membership data
      * @return SimpleXMLElement
      */
-    private function buildXML(array $params = array())
+    protected function buildXML(array $params = array())
     {
         $xml = new SimpleXMLElement('<?xml version="1.0"?><membership></membership>');
 
