@@ -58,7 +58,7 @@ class Issue extends AbstractApi
      * @param  array            $params for the new/updated issue data
      * @return SimpleXMLElement
      */
-    private function buildXML(array $params = array())
+    protected function buildXML(array $params = array())
     {
         $xml = new SimpleXMLElement('<?xml version="1.0"?><issue></issue>');
 
@@ -218,7 +218,7 @@ class Issue extends AbstractApi
      * @param  array $params
      * @return array
      */
-    private function cleanParams(array $params = array())
+    protected function cleanParams(array $params = array())
     {
         if (isset($params['project'])) {
             $params['project_id'] = $this->client->api('project')->getIdByName($params['project']);
