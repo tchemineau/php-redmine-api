@@ -140,7 +140,7 @@ class Version extends AbstractApi
         return $this->put('/versions/'.$id.'.xml', $xml->asXML());
     }
 
-    private function validateStatus(array $params = array())
+    protected function validateStatus(array $params = array())
     {
         $arrStatus = array(
             'open',
@@ -152,7 +152,7 @@ class Version extends AbstractApi
         }
     }
 
-    private function validateSharing(array $params = array())
+    protected function validateSharing(array $params = array())
     {
         $arrSharing = array(
             'none'        => 'Not shared',
